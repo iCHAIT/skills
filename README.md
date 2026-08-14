@@ -23,7 +23,7 @@ Safe to re-run. Leaves skills it doesn't own alone.
 | `tdd` | The red/green method: seams, good tests, anti-patterns. |
 | `ralph-report` | Post-run report built from git, not the agent's claims. |
 | `grill-me` | Adversarial interview to sharpen a plan. |
-| `pr-review` | Review a GitHub PR; real blockers only. |
+| `pr-review` | Review a GitHub PR; real blockers only. Needs `gh`. |
 
 Flow: `/to-spec` -> `/to-tickets` -> build -> `/ralph-report`. Build is either
 `/implement` by hand or an autonomous loop over the tickets (see ralph-loop,
