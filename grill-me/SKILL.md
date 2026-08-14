@@ -9,9 +9,11 @@ Interview me relentlessly about every aspect of this plan until we reach a share
 
 Each question should be formatted like so:
 
+```
 ❓ **Q1** - **<question title>**: <question body, might be multiple paragraphs, including multiple choices>
 
 ➡️ <your recommended answer>
+```
 
 Ask the questions one at a time, waiting for feedback on each question before continuing. Asking multiple questions at once is bewildering.
 
