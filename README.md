@@ -5,11 +5,22 @@ My Claude Code Agent skills.
 ## Setup
 
 ```sh
-./setup.sh            # symlink into ~/.claude/skills (edits are live)
-./setup.sh --copy     # copy instead
+git clone https://github.com/iCHAIT/skills.git
+cd skills
+./setup.sh
 ```
 
-Safe to re-run. Leaves skills it doesn't own alone.
+Symlinks each skill into `~/.claude/skills`, so keep the clone somewhere
+permanent. Safe to re-run, and it leaves skills it doesn't own alone.
+
+## Updating
+
+```sh
+git pull && ./setup.sh
+```
+
+Edits to existing skills are live on `git pull` alone - the symlinks point
+here. `setup.sh` is what picks up a newly added skill, so just run both.
 
 ## The skills
 
