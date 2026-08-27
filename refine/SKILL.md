@@ -1,6 +1,6 @@
 ---
 name: refine
-description: Use at the end of a work session, or when the user says "refine". Keeps docs/ short and current: deletes finished or superseded content, folds this session's durable knowledge into its owning doc, and holds the folder to its file budget. Also scaffolds the standard docs/ set for a new project that has none.
+description: Use at the end of a work session, or when the user says "refine". Keeps docs/ short and current: deletes finished or superseded content, folds this session's durable knowledge into its owning doc, and holds the folder to its file budget. Maintains the docs/ set that /ranger creates; run /ranger first if there is no docs/ yet.
 ---
 
 <!-- Runs INLINE in the main conversation (no `context: fork`) — it needs this
@@ -17,15 +17,6 @@ Only touch a doc whose knowledge changed this session.
 never append a status line, a dated update, or a "previously we…" paragraph. Delete
 the sequence of intermediate states; keep, as one line, any constraint that stops
 someone redoing a dead end. Git holds the history: no strikethrough, no tombstones.
-
-## 0. Bootstrap — only if `docs/` is missing or empty
-
-Create the **core 6** (step 3) as stubs: title, one-line charter, empty headings.
-Then stop and tell the user what to fill in.
-
-**Do not generate content from the codebase.** Such docs are verbose, hedged, and
-restate what the code already says — they degrade agent performance and are exactly
-what step 1 deletes. A human writes the first pass; this skill keeps it current.
 
 ## 1. Retire what is finished
 

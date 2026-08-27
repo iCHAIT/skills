@@ -33,10 +33,15 @@ here. `setup.sh` is what picks up a newly added skill, so just run both.
 | `tdd` | The red/green method: seams, good tests, anti-patterns. |
 | `ralph-report` | Post-run report built from git, not the agent's claims. |
 | `pr-review` | Review a GitHub PR; real blockers only. Needs `gh`. |
+| `ranger` | One-time codebase survey -> the standard `docs/` set. Maps only what it can cite; judgment headings left for you. |
+| `refine` | Session-end `docs/` pass: delete what's finished, fold in what's new, hold the file budget. |
 
 Flow: `/to-spec` -> `/to-tickets` -> build -> `/ralph-report`. Build is either
 `/implement` by hand or an autonomous loop over the tickets (see ralph-loop,
 which reads the `docs/specs/` layout but doesn't need these installed).
+
+Docs: `/ranger` once, when picking up a codebase with no `docs/`. `/refine` at the
+end of every session after that.
 
 
 ## Adding a skill
