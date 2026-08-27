@@ -1,6 +1,6 @@
 ---
 name: refine
-description: Use at the end of a work session, or when the user says "refine". Keeps docs/ short and current: deletes finished or superseded content, folds this session's durable knowledge into its owning doc, and holds the folder to its file budget. Maintains the docs/ set that /ranger creates; run /ranger first if there is no docs/ yet.
+description: "Use at the end of a work session, or when the user says \"refine\". Keeps docs/ short and current: deletes finished or superseded content, folds this session's durable knowledge into its owning doc, and holds the folder to its file budget. Maintains the docs/ set that /ranger creates; run /ranger first if there is no docs/ yet."
 ---
 
 <!-- Runs INLINE in the main conversation (no `context: fork`) — it needs this
