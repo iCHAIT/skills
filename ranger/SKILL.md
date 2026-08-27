@@ -98,6 +98,8 @@ Plus at most one doc per module that earns one — most don't.
   rest of the file empty for the user's own entries.
 - `architecture.md`'s stance section stays empty.
 - **~120 lines per doc.** Over → cut, don't split. One module, one doc.
+  `master-issue-list.md` is exempt: it is a worklist, and its length is the repo's,
+  not an editorial choice.
 - `README.md` matches the folder exactly.
 
 ## 4. Report
