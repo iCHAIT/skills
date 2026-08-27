@@ -52,10 +52,10 @@ derived from the codebase, not chosen — but it is a ceiling, never a quota. Mo
 modules need no doc at all.
 
 A module earns a doc only if someone would **get it wrong without one**: non-obvious
-rules, external contracts, hard-won gotchas. Code organization never earns one —
-`utils/`, `hooks/`, `theme/`, `routes/`, `layouts/`, `config/`, `pages/`,
-`components/`, `slices/` — however large. If you can't name the trap the doc
-prevents, don't write it.
+rules, external contracts, hard-won gotchas. Code organization never earns one — a
+directory named for a code role rather than a domain: shared helpers, UI primitives,
+routing, config, generated code, migrations, build output, fixtures — however large.
+If you can't name the trap the doc prevents, don't write it.
 
 The core 6 are identical in every project — don't rename them, don't add to the set:
 
@@ -76,7 +76,7 @@ migration finishes, migration docs go. A doc with no module is a doc with no own
   Over budget → merge or delete first, and say which.
 - **Splitting a module's doc is not a workaround.** One module, one doc; if it
   won't fit in ~120 lines, cut content, don't add a file.
-- **Nothing time-bound in `docs/`** — in-flight work lives in `plans/`.
+- **Nothing time-bound in `docs/`** — in-flight work lives in `specs/` at the root.
 - **Added or deleted a doc?** Update `README.md` so the router matches the folder.
 
 ## Rules

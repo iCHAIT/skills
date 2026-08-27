@@ -27,8 +27,8 @@ here. `setup.sh` is what picks up a newly added skill, so just run both.
 | Skill | What it does |
 |---|---|
 | `grill-me` | Adversarial interview to sharpen a plan. |
-| `to-spec` | Conversation -> `docs/specs/<slug>/spec.md`. |
-| `to-tickets` | Spec -> vertical-slice tickets at `docs/specs/<slug>/tickets/NN-*.md`. |
+| `to-spec` | Conversation -> `specs/<slug>/spec.md`. |
+| `to-tickets` | Spec -> vertical-slice tickets at `specs/<slug>/tickets/NN-*.md`. |
 | `implement` | Build a ticket: TDD, lint, tests, review, commit. |
 | `tdd` | The red/green method: seams, good tests, anti-patterns. |
 | `ralph-report` | Post-run report built from git, not the agent's claims. |
@@ -38,7 +38,7 @@ here. `setup.sh` is what picks up a newly added skill, so just run both.
 
 Flow: `/to-spec` -> `/to-tickets` -> build -> `/ralph-report`. Build is either
 `/implement` by hand or an autonomous loop over the tickets (see ralph-loop,
-which reads the `docs/specs/` layout but doesn't need these installed).
+which reads the `specs/` layout but doesn't need these installed).
 
 Docs: `/ranger` once, when picking up a codebase with no `docs/`. `/refine` at the
 end of every session after that.

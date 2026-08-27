@@ -14,7 +14,7 @@ This skill takes the current conversation context and codebase understanding and
 
 Check with the user that these seams match their expectations.
 
-3. Write the spec using the template below and save it to `docs/specs/<slug>/spec.md` (the `<slug>` names this piece of work — feature, bug, refactor, whatever — and its tickets will be co-located under `docs/specs/<slug>/tickets/` by `to-tickets`). Ask if a different location is wanted. Do not publish it anywhere else.
+3. Write the spec using the template below and save it to `specs/<slug>/spec.md` (the `<slug>` names this piece of work — feature, bug, refactor, whatever — and its tickets will be co-located under `specs/<slug>/tickets/` by `to-tickets`). Ask if a different location is wanted. Do not publish it anywhere else.
 
 <prd-template>
 

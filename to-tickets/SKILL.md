@@ -51,7 +51,7 @@ Iterate until the user approves the breakdown.
 
 ### 5. Write the tickets to local files
 
-Co-locate the tickets with their spec. If the source was a spec at `docs/specs/<slug>/spec.md`, write the tickets to `docs/specs/<slug>/tickets/NN-<issue-slug>.md`, reusing that same `<slug>` folder (ask if a different location is wanted). If there is no parent spec, ask the user for a `<slug>` for this piece of work and use `docs/specs/<slug>/tickets/`. Number `NN` in dependency order. Use the ticket body template below.
+Co-locate the tickets with their spec. If the source was a spec at `specs/<slug>/spec.md`, write the tickets to `specs/<slug>/tickets/NN-<issue-slug>.md`, reusing that same `<slug>` folder (ask if a different location is wanted). If there is no parent spec, ask the user for a `<slug>` for this piece of work and use `specs/<slug>/tickets/`. Number `NN` in dependency order. Use the ticket body template below.
 
 Write tickets in dependency order (blockers first) so the "Blocked by" field can reference the real file names / numbers.
 
@@ -60,7 +60,7 @@ The `Type` line is what a Ralph loop keys on: an AFK loop works only `Type: AFK`
 <issue-template>
 ## Parent
 
-A reference to the parent spec or issue. When tickets are co-located under `docs/specs/<slug>/tickets/`, this is the relative path `../spec.md`. Omit this section only if there was no source file/issue.
+A reference to the parent spec or issue. When tickets are co-located under `specs/<slug>/tickets/`, this is the relative path `../spec.md`. Omit this section only if there was no source file/issue.
 
 - **Type**: AFK or HITL
 - **Status**: Open
