@@ -13,8 +13,7 @@ overwrite human-written judgment with a structure-only pass.
 ## The governing rule
 
 **Map the wiring. Never infer the reasoning.** Every claim carries a `file:line`.
-Cannot cite it → cannot write it; leave the heading empty and report it. An empty
-heading is honest; a confident guess is not distinguishable from fact.
+Cannot cite it → cannot write it; leave the heading empty and report it.
 
 Docs record current state. No chronology, no dated updates.
 
@@ -28,9 +27,9 @@ Docs record current state. No chronology, no dated updates.
 | Duplicated state and who writes it | Which of two paths is the "right" one |
 
 **Never infer a guardrail.** Which environment is safe to deploy to, what must never
-be touched, what is destructive — these are consequences, not code facts, and a wrong
-guess here is the costliest error this skill can make. Leave it empty even when a
-config file makes the answer look obvious.
+be touched, what is destructive — these are consequences, not code facts. Leave them
+empty **even when a config file makes the answer look obvious**; that is exactly when
+the guess is wrong, and a wrong guardrail carrying a `file:line` reads as verified.
 
 No prose descriptions of behavior. Tables over paragraphs.
 
@@ -43,7 +42,7 @@ No prose descriptions of behavior. Tables over paragraphs.
   outrank this skill.
 - **Derive this repo's not-a-module list.** Not a module if named for a code role
   rather than a domain: shared helpers, UI primitives, routing, config, generated
-  code, migrations, build output, fixtures. Every stack spells these differently.
+  code, migrations, build output, fixtures.
 - **List candidate modules.** The test: name the business rule it owns. Cannot →
   not a module, however large.
 - **`docs/` non-empty → stop and ask** before overwriting.
@@ -61,19 +60,22 @@ Every prompt carries verbatim:
 > Do not describe what code does in prose; fill the template's tables. Do not infer
 > intent, rationale, or safety. Return the filled template and nothing else.
 
-Six questions, phrased in the stack's own terms. Skip any the stack lacks:
+The questions below, phrased in the stack's own terms. **Skip any the stack lacks**,
+and scale the count to the repo — a small codebase may warrant two agents or one.
 
-| Agent | Returns |
-|---|---|
-| Persistence | Where durable state lives, declared shape, duplicated state + writers |
-| Scheduled work | Name, schedule, entry point, configured resource limits |
-| Event handlers | Name, what fires it, what it watches, entry point |
-| Entry points | Externally reachable surface, auth check on each, `file:line` |
-| Build & env | Environments, switch mechanism, build/run/test/lint commands |
-| Conventions | Only what tooling enforces — linter, formatter, type checker, hooks |
+| Agent | Returns | Lands in |
+|---|---|---|
+| Persistence | Where durable state lives, declared shape, duplicated state + writers | `data-model.md` |
+| Scheduled work | Name, schedule, entry point, configured resource limits | `deployment.md` |
+| Event handlers | Name, what fires it, what it watches, entry point | `architecture.md` |
+| Entry points | Externally reachable surface, auth check on each, `file:line` | `architecture.md` |
+| Build & env | Environments, switch mechanism, build/run/test/lint commands | `deployment.md` |
+| Conventions | Only what tooling enforces — linter, formatter, type checker, hooks | `conventions.md` |
+| Model & prompt surface | Model identifiers and where pinned, prompt/template locations, tool and function definitions, eval sets, retrieval indexes | `architecture.md` |
 
 Plus one per business module: its paths, entry points, and which persistence
-locations it reads and writes.
+locations it reads and writes. A module may span languages — a domain with a
+backend and a frontend half is one module and one agent, not two.
 
 ## 3. Assemble
 
@@ -91,8 +93,10 @@ The core 6 — don't rename, don't add:
 Plus at most one doc per module that earns one — most don't.
 
 - Agent output goes in **as returned**; re-summarizing reintroduces prose.
-- `master-issue-list.md` ships **empty**; open debt is judgment. So does
-  `architecture.md`'s stance section.
+- `master-issue-list.md` gets one `## From the survey` section: what the agents
+  observed, cited, **unranked and unlabelled** — no severity, no ordering. Leave the
+  rest of the file empty for the user's own entries.
+- `architecture.md`'s stance section stays empty.
 - **~120 lines per doc.** Over → cut, don't split. One module, one doc.
 - `README.md` matches the folder exactly.
 
