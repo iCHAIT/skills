@@ -29,6 +29,7 @@ here. `setup.sh` is what picks up a newly added skill, so just run both.
 | `grill-me` | Adversarial interview to sharpen a plan. |
 | `to-spec` | Conversation -> `specs/<slug>/spec.md`. |
 | `to-tickets` | Spec -> vertical-slice tickets at `specs/<slug>/tickets/NN-*.md`. |
+| `to-questionnaire` | Decision you can't answer alone -> `to-questionnaire-<slug>.md` for someone else to fill in. |
 | `implement` | Build a ticket: TDD, lint, tests, review, commit. |
 | `tdd` | The red/green method: seams, good tests, anti-patterns. |
 | `ralph-report` | Post-run report built from git, not the agent's claims. |
